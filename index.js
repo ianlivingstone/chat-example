@@ -19,6 +19,7 @@ io.on('connection', function(socket) {
 
   socket.on('new message', function (data) {
     var msg = {
+      nickname: socket.nickname,
       message: data
     };
 
@@ -26,4 +27,8 @@ io.on('connection', function(socket) {
     socket.emit('new message', msg)
   });
 
+
+  socket.on('nickname', function (nickname) {
+    socket.nickname = nickname;
+  });
 });
