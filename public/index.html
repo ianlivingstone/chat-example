@@ -4,7 +4,14 @@
     <title>Hello World</title>
   </head>
   <body>
-    <h1>Hello World</h1>
-    <p>Hi Hoist!</p>
+    <h1>Hello World Chat Program</h1>
+    <ul id="messages">
+    </ul>
+    <form id="sendMessage" action="#">
+      <input id="inputMessage" type="text" placeholder="Send a message"/>
+    </form>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
